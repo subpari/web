@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <title>Home - Flauufy</title>
+    <meta name="description" content="Tflauufysite homepage" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="icon" href="/assets/favicon.ico" />
+    <script
+      defer
+      data-domain="flauufy.com"
+      data-api="https://revolt.chat/api/hello"
+      src="https://revolt.chat/js/p.js"
+    ></script>
+  </head>
+  <body onload="checkUserAgent() && checkUTM()">
+    <script type="text/javascript">
+      function checkUserAgent() {
+        const ua = navigator.userAgent;
+        const wkRegex = /AppleWebKit/;
+        const geckoRegex = /Gecko\//;
+        const isBlinkOrWebKit = wkRegex.test(ua);
+        const isGecko = geckoRegex.test(ua);
+        const hasDismissedNotice = localStorage.getItem(
+          "hasDismissedBrowserNotice"
+        );
+        if (!isBlinkOrWebKit && !isGecko && !hasDismissedNotice) {
+          showOrHide("browserSupportNotice", "inherit");
+        }
+      }
+      function showOrHide(id, displayType) {
+        const element = document.getElementById(id);
+        const status = element.getAttribute("style");
+        element.setAttribute("style", `display: ${displayType};`);
+      }
+    </script>
+    <div class="header">
+      <span class="headerlisting">
+        Flauufy •
+        <a title="you're already here!" href="/index.html">Home</a> •
+        <a
+          title="View the site's source code"
+          href="https://github.com/flauufy/web"
+        >
+          Source code
+        </a>
+      </span>
+      <hr style="max-width: 50em; text-align: left; margin-left: 0" />
+    </div>
+    <!-- <iframe src="components/header.html" style="width: 500px;" onload="this.before(this.contentDocument.body.children[0]);this.remove()"></iframe> -->
+    <div class="intro">
+      <div class="banner" id="browserSupportNotice" style="display: none">
+        <b>It looks like you're using an older/less popular browser.</b>
+        <br />
+        Please note that this site is only actively tested on Firefox, Edge and
+        Safari for iOS - while I will attempt to use widely implemented
+        APIs/features, there may be bugs on other browsers.
+        <br />
+        <button
+          type="button"
+          onclick="showOrHide('browserSupportNotice', 'none');
+          localStorage.setItem('hasDismissedBrowserNotice', true);"
+          style="cursor: pointer"
+        >
+          Close
+        </button>
+      </div>
+      <p>
+        Howdy! I'm Flauufy. I'm a hobbyist developer and I watch a lot of anime!<br />I know a decent bit on C, C#, Java, and even Unreal! <br>
+        I'm the founder and Main Develoeper @ <a href="https://beta.triagechat.net">TRIAGE</a>. I also made a <a href="https://scroll.store">clothing brand</a>!
+      </p>
+      <p>
+        You can contact me via the methods listed
+        <a
+          href="#"
+          onclick="showOrHide('contactinfo', 'inherit')"
+          style="cursor: pointer"
+          >here</a
+        >
+    
+      </p>
+      <p>
+        
+      </p>
+    </div>
+    <div class="ctinfobase" id="contactinfo" style="display: none">
+      <div class="ctinfobox">
+        <div class="ctinfo">
+          <h2>
+            Contacts! (<a
+              href="#"
+              onclick="showOrHide('contactinfo', 'none')"
+              style="cursor: pointer"
+              >close</a
+            >)
+          </h2>
+          <ul>
+            <li>
+              You can friend me on
+              <a href="https://discord.com"><b>Discord</b></a>
+              (<code>flauufy<wbr />#1183</code>) or
+              <a href="https://revolt.chat"><b>Revolt</b></a>
+              (<code>flauufy</code>). Discord is probably the best way to contact me because I'm active there.
+            </li>
+            <li>
+              If you're not a fan of Discord, you can also find me on
+              <a href="https://matrix.org"><b>Matrix</b></a> at
+              <code>flauufy:<wbr />flauufy.com</code>.
+            </li>
+            <li>
+              I also have <a href="https://twitter.com"><b>Twitter</b></a
+              >! I accept DMs from anyone (you don't need me to be following
+              you). My handle is
+              <a href="https://twitter.com/@Flauufy"
+                ><code>@RexogamerS</code></a
+              >. I'm also on the Fediverse as
+              <a rel="me" href="https://miruku.cafe/@flauufy"
+                ><code>@flauufy:<wbr />miruku.cafe</code></a
+              >.
+              </li>      
+</html>
