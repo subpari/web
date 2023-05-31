@@ -1,12 +1,12 @@
 /* MAIN STYLINGS */
 
 :root {
-  --link-dark: #0eb9d7;
+  --link-dark: #d70e62;
   --bg-dark: #021417;
   --text-dark: #ffffff;
-  --button-dark: #045564;
+  --button-dark: #380218;
   --tooltip-dark: #5c5c5c55;
-  --banner-dark: #077d92;
+  --banner-dark: #92074d;
 }
 
 * {
